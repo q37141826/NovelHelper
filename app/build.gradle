@@ -42,6 +42,7 @@ dependencies {
         daoPackage 'com.dengpinbo.novelhelper' // 一般为app包名+生成文件的文件夹名
         targetGenDir 'src/main/java' //生成文件路径
     }
-
+    //multidex，解决方法64K问题
+    compile 'com.android.support:multidex:1.0.1'
 
 }
