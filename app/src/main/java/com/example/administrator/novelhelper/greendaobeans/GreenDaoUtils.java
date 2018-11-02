@@ -1,4 +1,4 @@
-package com.example.administrator.novelhelper.activity.greendaobeans;
+package com.example.administrator.novelhelper.greendaobeans;
 
 import android.content.Context;
 
@@ -17,5 +17,7 @@ public class GreenDaoUtils {
         DaoSession mDaoSession = mDaoMaster.newSession();
         return mDaoSession;
     }
+
+
 
 }

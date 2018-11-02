@@ -11,8 +11,8 @@ import com.dengpinbo.novelhelper.DaoSession;
 import com.dengpinbo.novelhelper.TestUserDao;
 import com.example.administrator.novelhelper.R;
 import com.example.administrator.novelhelper.activity.BaseActivity;
-import com.example.administrator.novelhelper.activity.greendaobeans.GreenDaoUtils;
-import com.example.administrator.novelhelper.activity.greendaobeans.TestUser;
+import com.example.administrator.novelhelper.greendaobeans.GreenDaoUtils;
+import com.example.administrator.novelhelper.greendaobeans.TestUser;
 import com.example.mylibrary.myrecycler.OnRecyclerItemListener;
 
 import java.util.ArrayList;
@@ -51,8 +51,6 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
-
-
     }
 
     private void creatTable() {
@@ -86,33 +84,15 @@ public class MainActivity extends BaseActivity {
 
     public void readData(View view) {
         customSql();
-//        query();
     }
 
-    private void query() {
-        List<TestUser> userList = userDao.queryBuilder()
-                .where(TestUserDao.Properties.Id.notEq(1))
-                .limit(10)
-                .build().list();
-        StringBuilder s = new StringBuilder();
-        for (TestUser user : userList) {
-            s.append("userId:" + user.getId() + "username:" + user.getName());
-            s.append('\n');
-        }
-        textViewReadData.setText(s);
-    }
 
-    public void customSql() {
+
+    public void customSql() {//查询所有数据的正确姿势
         List<TestUser> userList = userDao.queryBuilder()
                 .where(TestUserDao.Properties.Id.notEq(-1))
                 .build()
                 .list();
-        StringBuilder s = new StringBuilder();
-        for (TestUser user : userList) {
-            s.append("userId:" + user.getId() + "username:" + user.getName());
-            s.append('\n');
-        }
-        textViewReadData.setText(s);
     }
 
 }

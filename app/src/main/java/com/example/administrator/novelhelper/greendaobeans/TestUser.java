@@ -1,4 +1,4 @@
-package com.example.administrator.novelhelper.activity.greendaobeans;
+package com.example.administrator.novelhelper.greendaobeans;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
