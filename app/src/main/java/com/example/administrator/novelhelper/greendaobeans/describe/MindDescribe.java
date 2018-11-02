@@ -1,14 +1,14 @@
 package com.example.administrator.novelhelper.greendaobeans.describe;
 
 
-import com.example.administrator.novelhelper.greendaobeans.SentenceAttribute;
+import com.example.administrator.novelhelper.greendaobeans.Describes;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
-public class MindDescribe  extends SentenceAttribute{
+public class MindDescribe  extends Describes {
     @Id
     Long id;
     String passion;

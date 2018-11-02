@@ -3,10 +3,12 @@ package com.example.administrator.novelhelper.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
@@ -52,4 +54,20 @@ public abstract class BaseActivity extends AppCompatActivity {
     public Activity getActivity(){
         return this;
     }
+
+    //检查权限
+    public boolean hasPermission(String... permission) {
+        for (String permissiom : permission) {
+            if (ActivityCompat.checkSelfPermission(this, permissiom) != PackageManager.PERMISSION_GRANTED) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    //添加权限
+    public void hasRequse(int code, String... permission) {
+        ActivityCompat.requestPermissions(this, permission, 1);
+    }
+
 }

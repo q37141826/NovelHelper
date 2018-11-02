@@ -1,26 +1,25 @@
-package com.example.administrator.novelhelper.greendaobeans.describe;
-
-
-import com.example.administrator.novelhelper.greendaobeans.Describes;
+package com.example.administrator.novelhelper.greendaobeans.describe.object_describe.weapon;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
-public class ActionDescribe  extends Describes {
+public class WeaponDescription extends WeaponType {
     @Id
     Long id;
     String name;
+    String alias;
 
-    @Generated(hash = 1014792179)
-    public ActionDescribe(Long id, String name) {
+    @Generated(hash = 455269219)
+    public WeaponDescription(Long id, String name, String alias) {
         this.id = id;
         this.name = name;
+        this.alias = alias;
     }
 
-    @Generated(hash = 2111919555)
-    public ActionDescribe() {
+    @Generated(hash = 572181874)
+    public WeaponDescription() {
     }
 
     public Long getId() {
@@ -37,5 +36,13 @@ public class ActionDescribe  extends Describes {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getAlias() {
+        return alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
     }
 }

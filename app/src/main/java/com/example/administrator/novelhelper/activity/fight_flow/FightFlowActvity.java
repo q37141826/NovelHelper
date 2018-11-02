@@ -1,15 +1,36 @@
 package com.example.administrator.novelhelper.activity.fight_flow;
 
-import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.example.administrator.novelhelper.R;
+import com.example.administrator.novelhelper.activity.TitleActivity;
 
-public class FightFlowActvity extends AppCompatActivity {
+public class FightFlowActvity extends TitleActivity {
+
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_fight_flow);
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void initView() {
+
+    }
+
+    @Override
+    protected void onInitViewNew() {
+
+    }
+
+    @Override
+    protected int getLayoutRes() {
+        return R.layout.activity_fight_flow;
+    }
+
+    @Override
+    public void onClick(View v) {
+
     }
 }

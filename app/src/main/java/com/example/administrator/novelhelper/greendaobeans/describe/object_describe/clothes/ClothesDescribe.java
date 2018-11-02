@@ -1,6 +1,4 @@
-package com.example.administrator.novelhelper.greendaobeans.describe;
-
-import com.example.administrator.novelhelper.greendaobeans.SentenceAttribute;
+package com.example.administrator.novelhelper.greendaobeans.describe.object_describe.clothes;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
@@ -8,19 +6,17 @@ import org.greenrobot.greendao.annotation.Generated;
 
 //服饰描写
 @Entity
-public class ClothesDescribe extends SentenceAttribute implements Describe {
+public class ClothesDescribe extends ClothesPart{
     @Id
     Long id;
-    String partName;
     String color;
     String alias;
     String material;
 
-    @Generated(hash = 1991480921)
-    public ClothesDescribe(Long id, String partName, String color, String alias,
-            String material) {
+
+    @Generated(hash = 358355412)
+    public ClothesDescribe(Long id, String color, String alias, String material) {
         this.id = id;
-        this.partName = partName;
         this.color = color;
         this.alias = alias;
         this.material = material;
@@ -30,10 +26,6 @@ public class ClothesDescribe extends SentenceAttribute implements Describe {
     public ClothesDescribe() {
     }
 
-    @Override
-    public void setTypeName(String typeName) {
-        this.typeName=getClass().getSimpleName();
-    }
 
     public Long getId() {
         return id;
@@ -43,13 +35,6 @@ public class ClothesDescribe extends SentenceAttribute implements Describe {
         this.id = id;
     }
 
-    public String getPartName() {
-        return partName;
-    }
-
-    public void setPartName(String partName) {
-        this.partName = partName;
-    }
 
     public String getColor() {
         return color;
