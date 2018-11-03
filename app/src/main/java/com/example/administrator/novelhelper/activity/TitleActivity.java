@@ -5,8 +5,8 @@ import android.view.ViewGroup;
 
 import com.example.administrator.novelhelper.R;
 import com.example.administrator.utils.ToastUtil;
-import com.example.mylibrary.StatusBarUtils;
-import com.example.mylibrary.wight.TitleView;
+import com.example.mylibrary.utils.StatusBarUtils;
+import com.example.mylibrary.wight.titleview.TitleView;
 
 
 /**

@@ -21,22 +21,22 @@ public class DaoMaster extends AbstractDaoMaster {
 
     /** Creates underlying database table using DAOs. */
     public static void createAllTables(Database db, boolean ifNotExists) {
+        ActionDescribeDao.createTable(db, ifNotExists);
         MannerDescribeDao.createTable(db, ifNotExists);
         MindDescribeDao.createTable(db, ifNotExists);
-        TestUserDao.createTable(db, ifNotExists);
-        ActionDescribeDao.createTable(db, ifNotExists);
         ClothesDescribeDao.createTable(db, ifNotExists);
         WeaponDescriptionDao.createTable(db, ifNotExists);
+        TestUserDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(Database db, boolean ifExists) {
+        ActionDescribeDao.dropTable(db, ifExists);
         MannerDescribeDao.dropTable(db, ifExists);
         MindDescribeDao.dropTable(db, ifExists);
-        TestUserDao.dropTable(db, ifExists);
-        ActionDescribeDao.dropTable(db, ifExists);
         ClothesDescribeDao.dropTable(db, ifExists);
         WeaponDescriptionDao.dropTable(db, ifExists);
+        TestUserDao.dropTable(db, ifExists);
     }
 
     /**
@@ -55,12 +55,12 @@ public class DaoMaster extends AbstractDaoMaster {
 
     public DaoMaster(Database db) {
         super(db, SCHEMA_VERSION);
+        registerDaoClass(ActionDescribeDao.class);
         registerDaoClass(MannerDescribeDao.class);
         registerDaoClass(MindDescribeDao.class);
-        registerDaoClass(TestUserDao.class);
-        registerDaoClass(ActionDescribeDao.class);
         registerDaoClass(ClothesDescribeDao.class);
         registerDaoClass(WeaponDescriptionDao.class);
+        registerDaoClass(TestUserDao.class);
     }
 
     public DaoSession newSession() {
