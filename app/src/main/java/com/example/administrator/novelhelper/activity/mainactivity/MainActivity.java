@@ -1,5 +1,6 @@
 package com.example.administrator.novelhelper.activity.mainactivity;
 
+import android.Manifest;
 import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import com.example.administrator.novelhelper.activity.BaseActivity;
 import com.example.administrator.novelhelper.greendaobeans.GreenDaoUtils;
 import com.example.administrator.novelhelper.greendaobeans.TestUser;
 import com.example.mylibrary.myrecycler.OnRecyclerItemListener;
+import com.example.mylibrary.utils.ExcelReaderUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +26,7 @@ public class MainActivity extends BaseActivity {
     private MainMenueAdapter adapter;
     private TextView textViewReadData;
     private TestUserDao userDao;
-
+    private String perimissions[]={Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
     @Override
     protected int getLayoutRes() {
@@ -33,6 +35,9 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
+        if(!hasPermission(perimissions)){
+            hasRequse(1,perimissions);
+        }
         List<MenueBean> datas = new ArrayList<>();
         List<Intent> menuIntent = MenuName.createMenuIntent(this);
         for (int i = 0; i < MenuName.menueName.length; i++) {
@@ -66,6 +71,7 @@ public class MainActivity extends BaseActivity {
         recyclerview.setAdapter(adapter);
         textViewReadData = findViewById(R.id.textViewReadData);
         creatTable();
+
     }
 
 
@@ -84,6 +90,12 @@ public class MainActivity extends BaseActivity {
 
     public void readData(View view) {
         customSql();
+        ExcelReaderUtils.readExcelFile(getContext(), "effect.xls", new ExcelReaderUtils.Listenner() {
+            @Override
+            public void readOk(Object data) {
+
+            }
+        });
     }
 
 
