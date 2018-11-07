@@ -24,7 +24,7 @@ public class ExcelReaderUtils {
 
 
     public interface Listenner {
-        void readOk(Object data);
+        void readOk(List<List> data);
     }
 
     public static void readExcelFile(Context context, String filepath,Listenner listenner) {
@@ -91,9 +91,7 @@ public class ExcelReaderUtils {
                     List<String>  inners=new ArrayList<>();
                     for (int j = 0; j < Rows; j++) {
                         String content = sheet.getCell(i, j).getContents();//结果是String类型的，根据具体需求进行类型转换
-                        if(i!=0){
                             inners.add(content);
-                        }
                     }
                     datas.add(inners);
                 }

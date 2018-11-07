@@ -3,13 +3,21 @@ package com.example.administrator.novelhelper.greendaobeans.describe.object_desc
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class EffectDescribe implements Parcelable {
+import com.example.administrator.novelhelper.greendaobeans.Describes;
+
+public class EffectDescribe extends Describes implements Parcelable {
     private String id;
     private String object_name;
     private String skill_name;
     private String level;
     private String time;
     private String describe;
+
+    public static final String BEFORE = "before";
+    public static final String IN_LONG = "in_long";
+    public static final String IN_SHORT = "in_short";
+    public static final String FINALLY = "finally";
+
 
     public String getId() {
         return id;
@@ -75,6 +83,7 @@ public class EffectDescribe implements Parcelable {
     }
 
     public EffectDescribe() {
+        typeName="特效描写";
     }
 
     protected EffectDescribe(Parcel in) {
@@ -84,6 +93,7 @@ public class EffectDescribe implements Parcelable {
         this.level = in.readString();
         this.time = in.readString();
         this.describe = in.readString();
+        typeName="特效描写";
     }
 
     public static final Parcelable.Creator<EffectDescribe> CREATOR = new Parcelable.Creator<EffectDescribe>() {

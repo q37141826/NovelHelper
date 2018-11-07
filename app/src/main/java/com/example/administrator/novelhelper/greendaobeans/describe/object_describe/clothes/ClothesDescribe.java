@@ -20,10 +20,12 @@ public class ClothesDescribe extends ClothesPart{
         this.color = color;
         this.alias = alias;
         this.material = material;
+        typeName="衣着描写";
     }
 
     @Generated(hash = 162041769)
     public ClothesDescribe() {
+        typeName="衣着描写";
     }
 
 

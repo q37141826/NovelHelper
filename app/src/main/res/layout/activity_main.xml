@@ -11,7 +11,7 @@
         app:title="主界面"
         app:titleTextColor="@color/white"
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="60dp">
     </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:orientation="vertical"

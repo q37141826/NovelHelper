@@ -17,10 +17,12 @@ public class MindDescribe  extends Describes {
     public MindDescribe(Long id, String passion) {
         this.id = id;
         this.passion = passion;
+        typeName="心理描写";
     }
 
     @Generated(hash = 2073764952)
     public MindDescribe() {
+        typeName="心理描写";
     }
 
     public Long getId() {

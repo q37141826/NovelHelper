@@ -23,6 +23,7 @@
             android:textColor="@color/grey" />
 
         <EditText
+            android:id="@+id/editSubName"
             android:layout_width="80dp"
             android:layout_height="40dp" />
 
@@ -33,10 +34,15 @@
             android:textColor="@color/grey" />
 
         <EditText
+            android:id="@+id/editObName"
             android:layout_width="80dp"
             android:layout_height="40dp" />
 
     </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerviewFightFlow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>

@@ -17,10 +17,12 @@ public class ActionDescribe  extends Describes {
     public ActionDescribe(Long id, String name) {
         this.id = id;
         this.name = name;
+        typeName="动作描写";
     }
 
     @Generated(hash = 2111919555)
     public ActionDescribe() {
+        typeName="动作描写";
     }
 
     public Long getId() {

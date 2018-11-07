@@ -21,10 +21,13 @@ public class MannerDescribe  extends Describes {
         this.id = id;
         this.partName = partName;
         this.meaning = meaning;
+        typeName="神态描写";
+
     }
 
     @Generated(hash = 505988366)
     public MannerDescribe() {
+        typeName="神态描写";
     }
 
 

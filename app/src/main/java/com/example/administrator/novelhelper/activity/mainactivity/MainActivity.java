@@ -15,7 +15,6 @@ import com.example.administrator.novelhelper.activity.BaseActivity;
 import com.example.administrator.novelhelper.greendaobeans.GreenDaoUtils;
 import com.example.administrator.novelhelper.greendaobeans.TestUser;
 import com.example.mylibrary.myrecycler.OnRecyclerItemListener;
-import com.example.mylibrary.utils.ExcelReaderUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -90,13 +89,8 @@ public class MainActivity extends BaseActivity {
 
     public void readData(View view) {
         customSql();
-        ExcelReaderUtils.readExcelFile(getContext(), "effect.xls", new ExcelReaderUtils.Listenner() {
-            @Override
-            public void readOk(Object data) {
-
-            }
-        });
     }
+
 
 
 

@@ -16,10 +16,12 @@ public class WeaponDescription extends WeaponType {
         this.id = id;
         this.name = name;
         this.alias = alias;
+        typeName="兵器";
     }
 
     @Generated(hash = 572181874)
     public WeaponDescription() {
+        typeName="兵器";
     }
 
     public Long getId() {
