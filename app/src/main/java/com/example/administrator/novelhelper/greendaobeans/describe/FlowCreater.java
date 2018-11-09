@@ -28,39 +28,32 @@ public class FlowCreater {
     }
 
     //战斗流程的算法
-    public static List<Describes> getFightFlow(int circleTimes,int subLevel,int obLevel) {//参数  回合数，主人公综合实力，敌方综合实力
-        final String SINGPLE="SINGPLE";
-        final String NORMAL="NORMAL";
-        final String HARD="HARD";
-        final String IMPOSSOBLE="IMPOSSOBLE";
-        String type=SINGPLE;
-        int describeTimes=2;
-        if(subLevel-obLevel>1){
-            type=SINGPLE;
-            describeTimes=2;
-        }else if(subLevel-obLevel>-1&&subLevel-obLevel<=1){
-            type=NORMAL;
-            describeTimes=5;
-        }else if(subLevel-obLevel>-3&&subLevel-obLevel<=-1){
-            type=HARD;
-            describeTimes=10;
-        }else {
-            describeTimes=5;
-            type=IMPOSSOBLE;
+    public static List<Describes> getFightFlow(int circleTimes, int subLevel, int obLevel) {//参数  回合数，主人公综合实力，敌方综合实力
+        final String SINGPLE = "SINGPLE";
+        final String NORMAL = "NORMAL";
+        final String HARD = "HARD";
+        final String IMPOSSOBLE = "IMPOSSOBLE";
+        String type = SINGPLE;
+        int describeTimes = 2;
+        if (subLevel - obLevel > 1) {
+            type = SINGPLE;
+            describeTimes = 2;
+        } else if (subLevel - obLevel > -1 && subLevel - obLevel <= 1) {
+            type = NORMAL;
+            describeTimes = 5;
+        } else if (subLevel - obLevel > -3 && subLevel - obLevel <= -1) {
+            type = HARD;
+            describeTimes = 10;
+        } else {
+            describeTimes = 5;
+            type = IMPOSSOBLE;
         }
-        List<Describes> describes=new ArrayList<>();
+        List<Describes> describes = new ArrayList<>();
         for (int i = 0; i < circleTimes; i++) {
-            for (int j = 0; j <describeTimes ; j++) {
-                if(type.equals(SINGPLE)){
 
-                }
-            }
         }
-        ClothesDescribe clothesDescribe=new ClothesDescribe();
+        ClothesDescribe clothesDescribe = new ClothesDescribe();
         describes.add(clothesDescribe);
-
-
-
 
 
         return describes;
